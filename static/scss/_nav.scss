@@ -1,0 +1,26 @@
+.nav {
+  background: teal;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  color: #ffffff;
+  min-height: 12vh;
+  align-items: center;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-family: $bold;
+  }
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    li {
+      list-style: none;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}

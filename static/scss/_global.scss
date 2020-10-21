@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Be_Vietnam_Bold;
+  src: url(/static/fonts/BeVietnam-Bold.ttf);
+}
+
+@font-face {
+  font-family: Be_Vietnam_Regular;
+  src: url(/static/fonts/BeVietnam-Regular.ttf);
+}
+
+//FONTS
+$bold: Be_Vietnam_Bold;
+$regular: Be_Vietnam_Regular;
+
+body {
+  font-family: $regular;
+}

@@ -1,8 +1,16 @@
 {% extends "agenda/main.html" %}
 {% block content %}
-<h1>AGENDA</h1>
 {% for contact in agenda %}
-    <h1>{{contact.name}}</h1>
+    <div class="card">
+         <div class="card_header">
+            <i class="fas fa-lg fa-ellipsis-h"></i>
+            <h3>{{contact.name}}</h3>
+            <a href="#"><i class="fas fa-lg fa-heart"></i></a>
+        </div>
+        <div class="card_number">
+            <h3>{{contact.number}}</h3>
+         </div>
+    </div>
 {% endfor %}
 
 {% endblock %} 
