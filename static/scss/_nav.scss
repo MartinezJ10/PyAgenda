@@ -1,8 +1,8 @@
 .nav {
-  background: teal;
+  background: $nav;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  color: #ffffff;
+  color: $contrast;
   min-height: 12vh;
   align-items: center;
 

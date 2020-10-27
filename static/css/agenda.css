@@ -19,10 +19,10 @@ body {
 }
 
 .nav {
-  background: teal;
+  background: #a7ff83;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  color: #ffffff;
+  color: #07636b;
   min-height: 12vh;
   align-items: center;
 }
@@ -46,5 +46,145 @@ body {
 
 .nav ul li a {
   text-decoration: none;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1.5rem 3rem;
+  grid-gap: 5%;
+}
+
+.block .create_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block .create_contact .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block .create_contact .form input[type="text"] {
+  font-family: Be_Vietnam_Regular;
+  height: 1.5rem;
+  margin-bottom: 0.7rem;
+  padding: 0.7rem 0.5rem;
+  font-size: 1rem;
+}
+
+.block .create_contact .form input[type="submit"] {
+  font-family: Be_Vietnam_Regular;
+  padding: 0.4rem;
+  background-color: #07636b;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.block .create_contact .form input[type="submit"]:hover {
+  color: #07636b;
+  background-color: #a7ff83;
+}
+
+.block .card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  color: #07636b;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.block .card:hover {
+  scale: 1.05;
+}
+
+.block .card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.block .card .card_header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #a7ff83;
+  align-items: center;
+}
+
+.block .card .card_header .settings {
+  /* Links inside the dropup */
+  /* Change color of dropup links on hover */
+  /* Show the dropup menu on hover */
+}
+
+.block .card .card_header .settings .dropup {
+  position: relative;
+  display: inline-block;
+}
+
+.block .card .card_header .settings .dropup-content {
+  background-color: #f4ffef;
+  display: none;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 1rem;
+  min-width: 5rem;
+  z-index: 1;
+}
+
+.block .card .card_header .settings .dropup-content .drop_link {
+  padding: 0.3rem 0.5rem;
+  display: block;
+}
+
+.block .card .card_header .settings input[type="submit"] {
+  border: none;
+  background-color: #f4ffef;
+  width: 100%;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.block .card .card_header .settings .dropup-content .drop_link:hover {
+  background-color: rgba(7, 99, 107, 0.15);
+}
+
+.block .card .card_header .settings .dropup:hover .dropup-content {
+  display: block;
+}
+
+.block .card .card_number {
+  display: flex;
+  background-color: #f4ffef;
+  justify-content: center;
+}
+
+.block .card .card_number h3 {
+  margin: 3rem 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .block {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1.5rem;
+  }
+  .block .card {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .block {
+    grid-template-columns: 1fr;
+    margin: 0.7rem;
+    grid-gap: 1%;
+  }
 }
 /*# sourceMappingURL=agenda.css.map */

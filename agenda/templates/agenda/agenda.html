@@ -1,16 +1,42 @@
-{% extends "agenda/main.html" %}
-{% block content %}
-{% for contact in agenda %}
-    <div class="card">
-         <div class="card_header">
-            <i class="fas fa-lg fa-ellipsis-h"></i>
-            <h3>{{contact.name}}</h3>
-            <a href="#"><i class="fas fa-lg fa-heart"></i></a>
+{% extends "agenda/main.html" %} 
+{% block content %} 
+<div class="block">
+  <div class="create_contact">
+    <form class="form" id="create_form" action="#" method="POST">
+      {% csrf_token %}
+      <div>
+        {{form.name}}
+      </div>
+      <div>
+        {{form.number}}
+      </div>
+      <div>
+        <input type="submit" value="Add Contact" class="btn">
+      </div>
+    </form>
+  </div>
+    {% for contact in agenda %}
+  <div class="card">
+    <div class="card_header">
+      <div class="settings">
+        <div class="dropup">
+          <i class="fas fa-lg fa-ellipsis-h"></i>
+          <div class="dropup-content">
+            <form action="{% url 'delete' contact.id %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" class="drop_link" value="Delete"></input>
+            </form>
+          </div>
         </div>
-        <div class="card_number">
-            <h3>{{contact.number}}</h3>
-         </div>
+      </div>
+      <h3>{{contact.name}}</h3>
+      <a href="#"><i class="fas fa-lg fa-heart"></i></a>
     </div>
-{% endfor %}
+    <div class="card_number">
+      <h3>{{contact.number}}</h3>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
 
-{% endblock %} 
